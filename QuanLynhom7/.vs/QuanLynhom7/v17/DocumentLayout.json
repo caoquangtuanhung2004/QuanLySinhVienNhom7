@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CC88B819-4993-4FBB-A241-B286212B2F19}|QuanLynhom7.csproj|d:\\hoctap_2025_2026\\lap_trinh_ung_dung.net\\quanlysinhviennhom7\\quanlynhom7\\quanlysinhvien.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC88B819-4993-4FBB-A241-B286212B2F19}|QuanLynhom7.csproj|solutionrelative:quanlysinhvien.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC88B819-4993-4FBB-A241-B286212B2F19}|QuanLynhom7.csproj|d:\\hoctap_2025_2026\\lap_trinh_ung_dung.net\\quanlysinhviennhom7\\quanlynhom7\\quanlysinhvien.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC88B819-4993-4FBB-A241-B286212B2F19}|QuanLynhom7.csproj|solutionrelative:quanlysinhvien.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC88B819-4993-4FBB-A241-B286212B2F19}|QuanLynhom7.csproj|d:\\hoctap_2025_2026\\lap_trinh_ung_dung.net\\quanlysinhviennhom7\\quanlynhom7\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC88B819-4993-4FBB-A241-B286212B2F19}|QuanLynhom7.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC88B819-4993-4FBB-A241-B286212B2F19}|QuanLynhom7.csproj|d:\\hoctap_2025_2026\\lap_trinh_ung_dung.net\\quanlysinhviennhom7\\quanlynhom7\\menuchu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC88B819-4993-4FBB-A241-B286212B2F19}|QuanLynhom7.csproj|solutionrelative:menuchu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC88B819-4993-4FBB-A241-B286212B2F19}|QuanLynhom7.csproj|d:\\hoctap_2025_2026\\lap_trinh_ung_dung.net\\quanlysinhviennhom7\\quanlynhom7\\menuchu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC88B819-4993-4FBB-A241-B286212B2F19}|QuanLynhom7.csproj|solutionrelative:menuchu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CC88B819-4993-4FBB-A241-B286212B2F19}|QuanLynhom7.csproj|d:\\hoctap_2025_2026\\lap_trinh_ung_dung.net\\quanlysinhviennhom7\\quanlynhom7\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{CC88B819-4993-4FBB-A241-B286212B2F19}|QuanLynhom7.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC88B819-4993-4FBB-A241-B286212B2F19}|QuanLynhom7.csproj|d:\\hoctap_2025_2026\\lap_trinh_ung_dung.net\\quanlysinhviennhom7\\quanlynhom7\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{CC88B819-4993-4FBB-A241-B286212B2F19}|QuanLynhom7.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC88B819-4993-4FBB-A241-B286212B2F19}|QuanLynhom7.csproj|D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,11 +42,86 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "menuchu.xaml.cs",
+              "DocumentMoniker": "D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\menuchu.xaml.cs",
+              "RelativeDocumentMoniker": "menuchu.xaml.cs",
+              "ToolTip": "D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\menuchu.xaml.cs",
+              "RelativeToolTip": "menuchu.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T05:47:03.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "quanlysinhvien.xaml.cs",
+              "DocumentMoniker": "D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\quanlysinhvien.xaml.cs",
+              "RelativeDocumentMoniker": "quanlysinhvien.xaml.cs",
+              "ToolTip": "D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\quanlysinhvien.xaml.cs",
+              "RelativeToolTip": "quanlysinhvien.xaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAuwBoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T05:31:28.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-15T02:46:14.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-09-15T02:46:13.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "menuchu.xaml",
+              "DocumentMoniker": "D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\menuchu.xaml",
+              "RelativeDocumentMoniker": "menuchu.xaml",
+              "ToolTip": "D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\menuchu.xaml",
+              "RelativeToolTip": "menuchu.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-15T02:45:15.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "quanlysinhvien.xaml",
+              "DocumentMoniker": "D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\quanlysinhvien.xaml",
+              "RelativeDocumentMoniker": "quanlysinhvien.xaml",
+              "ToolTip": "D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\quanlysinhvien.xaml",
+              "RelativeToolTip": "quanlysinhvien.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-15T02:41:34.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -34,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\HocTap_2025_2026\\Lap_Trinh_Ung_Dung.net\\QuanLySinhVienNhom7\\QuanLynhom7\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
