@@ -19,11 +19,16 @@ namespace QuanLynhom7
     /// </summary>
     public partial class quanlysinhvien : Window
     {
+        QuanLySinhViennhom7Entities db = new QuanLySinhViennhom7Entities();
         public quanlysinhvien()
         {
             InitializeComponent();
+            loadlop();
         }
-
-        
+        private void  loadlop()
+        {
+            var dsl = db.Lops.ToList();
+            dslopcombox.ItemsSource = dsl;
+        }      
     }
 }
