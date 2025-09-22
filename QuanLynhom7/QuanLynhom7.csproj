@@ -95,6 +95,9 @@
     <Compile Include="MonHoc.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyKhoa.xaml.cs">
+      <DependentUpon>QuanLyKhoa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="quanlysinhvien.xaml.cs">
       <DependentUpon>quanlysinhvien.xaml</DependentUpon>
     </Compile>
@@ -121,6 +124,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="menuchu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuanLyKhoa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

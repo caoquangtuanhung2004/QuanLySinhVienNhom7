@@ -4,7 +4,7 @@
         Title="Quản lý sinh viên" Height="500" Width="900"
         WindowStartupLocation="CenterScreen"
         Background="#F5F5F5"
-        ResizeMode="CanResize">
+        ResizeMode="CanResize" Loaded="Window_Loaded">
 
     <Window.Resources>
         <!-- Style cho Button -->
@@ -97,18 +97,18 @@
                     </Grid.RowDefinitions>
 
                     <Label Grid.Row="0" Grid.Column="0" Content="Mã sinh viên:"/>
-                    <TextBox Grid.Row="0" Grid.Column="1"/>
+                    <TextBox x:Name="txtmasv" Grid.Row="0" Grid.Column="1"/>
 
                     <Label Grid.Row="1" Grid.Column="0" Content="Họ tên:"/>
-                    <TextBox Grid.Row="1" Grid.Column="1"/>
+                    <TextBox x:Name="txthoten" Grid.Row="1" Grid.Column="1"/>
 
                     <Label Grid.Row="2" Grid.Column="0" Content="Địa chỉ:"/>
-                    <TextBox Grid.Row="2" Grid.Column="1" Height="60" AcceptsReturn="True" TextWrapping="Wrap"/>
+                    <TextBox x:Name="txtdiachi" Grid.Row="2" Grid.Column="1" Height="60" AcceptsReturn="True" TextWrapping="Wrap"/>
 
                     <Label Grid.Row="3" Grid.Column="0" Content="Giới tính:"/>
                     <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
-                        <RadioButton Content="Nam" Margin="0,0,20,0"/>
-                        <RadioButton Content="Nữ"/>
+                        <RadioButton x:Name="radionam" Content="Nam" Margin="0,0,20,0"/>
+                        <RadioButton x:Name="raduonu" Content="Nữ"/>
                     </StackPanel>
 
                     <Label Grid.Row="4" Grid.Column="0" Content="Lớp:"/>
@@ -116,25 +116,41 @@
                               DisplayMemberPath="TenLop" SelectedValuePath="MaLop"/>
 
                     <Label Grid.Row="5" Grid.Column="0" Content="Ngày sinh:"/>
-                    <DatePicker Grid.Row="5" Grid.Column="1"/>
+                    <DatePicker x:Name="datengaysinh" Grid.Row="5" Grid.Column="1"/>
                 </Grid>
             </GroupBox>
 
             <!-- Chức năng -->
             <GroupBox Header="Chức năng" Grid.Row="0" Grid.Column="1" FontSize="16" FontWeight="Bold">
                 <StackPanel Margin="10">
-                    <Button Content="Thêm"/>
-                    <Button Content="Sửa"/>
-                    <Button Content="Xóa"/>
-                    <Button Content="Tìm kiếm"/>
-                    <Button Content="Thêm sinh viên"/>
+                    <Button x:Name="btnthem" Content="Thêm" Click="btnthem_Click"/>
+                    <Button x:Name="btnsua" Content="Sửa"/>
+                    <Button x:Name="btnxoa" Content="Xóa"/>
+                    <Button x:Name="btntimkiem" Content="Tìm kiếm"/>
                 </StackPanel>
             </GroupBox>
 
             <!-- Danh sách sinh viên -->
-            <DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5"
-                      AutoGenerateColumns="True" IsReadOnly="True"
-                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <DataGrid x:Name="datadanhachsinhvien" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="238,10,-228,0"
+                      AutoGenerateColumns="False" IsReadOnly="False"
+                      ColumnWidth="*">
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <!-- Chữ đậm -->
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <!-- Căn giữa -->
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Mã SV" Binding="{Binding MaSV}" />
+                    <DataGridTextColumn Header="Họ tên" Binding="{Binding HoTen}" />
+                    <DataGridTextColumn Header="Ngày sinh" Binding="{Binding NgaySinh, StringFormat=d}" />
+                    <DataGridTextColumn Header="Giới tính" Binding="{Binding GioiTinh}" />
+                    <DataGridTextColumn Header="Địa chỉ" Binding="{Binding DiaChi}" />
+                    <DataGridTextColumn Header="Lớp" Binding="{Binding Lop.TenLop}" />
+                </DataGrid.Columns>
+            </DataGrid>
         </Grid>
     </DockPanel>
 </Window>
