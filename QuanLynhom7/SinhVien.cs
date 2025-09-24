@@ -25,10 +25,8 @@ namespace QuanLynhom7
         public string GioiTinh { get; set; }
         public string DiaChi { get; set; }
         public string MaLop { get; set; }
-        public Nullable<int> ID_TaiKhoan { get; set; }
     
         public virtual ICollection<Diem> Diems { get; set; }
         public virtual Lop Lop { get; set; }
-        public virtual TaiKhoan TaiKhoan { get; set; }
     }
 }

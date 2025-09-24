@@ -30,6 +30,5 @@ namespace QuanLynhom7
         public DbSet<Lop> Lops { get; set; }
         public DbSet<MonHoc> MonHocs { get; set; }
         public DbSet<SinhVien> SinhViens { get; set; }
-        public DbSet<TaiKhoan> TaiKhoans { get; set; }
     }
 }

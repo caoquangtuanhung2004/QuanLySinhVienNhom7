@@ -24,6 +24,7 @@ namespace QuanLynhom7
         public QuanLyKhoa()
         {
             InitializeComponent();
+            LoadData();
         }
         private void LoadData()
         {
@@ -32,22 +33,44 @@ namespace QuanLynhom7
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtMaKhoa.Text) || string.IsNullOrWhiteSpace(txtTenKhoa.Text))
+            string makhoa = txtMaKhoa.Text.Trim();
+
+            // 1. Kiểm tra dữ liệu bắt buộc
+            if (string.IsNullOrWhiteSpace(makhoa) || string.IsNullOrWhiteSpace(txtTenKhoa.Text))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                MessageBox.Show("Mã khoa và tên khoa không được để trống");
+                return;
+            }
+            
+
+            // 2. Kiểm tra trùng Mã SV
+            var svTonTai = db.Khoas.FirstOrDefault(s => s.MaKhoa == makhoa);
+            if (svTonTai != null)
+            {
+                MessageBox.Show("Mã khoa đã tồn tại, vui lòng nhập mã khác!");
                 return;
             }
 
-            var khoa = new Khoa
+            // 3. Thêm mới
+            Khoa sv = new Khoa()
             {
-                MaKhoa = txtMaKhoa.Text,
-                TenKhoa = txtTenKhoa.Text
+                MaKhoa = makhoa,
+                TenKhoa = txtTenKhoa.Text.Trim(),
+               
             };
 
-            db.Khoas.Add(khoa);
-            db.SaveChanges();
-            LoadData();
-            MessageBox.Show("Thêm khoa thành công!");
+            db.Khoas.Add(sv);
+
+            try
+            {
+                db.SaveChanges();
+                MessageBox.Show("Thêm khoa thành công!");
+                LoadData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi lưu: " + ex.Message);
+            }
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
@@ -97,5 +120,26 @@ namespace QuanLynhom7
                 txtTenKhoa.Text = selectedKhoa.TenKhoa;
             }
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadData();
+        }
+        private void quanlysinhvien_Click(object sender, RoutedEventArgs e)
+        {
+            quanlysinhvien sinhvienql = new quanlysinhvien();
+            sinhvienql.Show();
+            this.Close();
+
+        }
+        private void quanlymonhoc_Click(object sender, RoutedEventArgs e)
+        {
+            QuanLyMonHoc qlk = new QuanLyMonHoc();
+            qlk.Show();
+            this.Close();
+
+        }
+
+        
     }
 }

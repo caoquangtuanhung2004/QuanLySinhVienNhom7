@@ -64,8 +64,8 @@
         <!-- Menu -->
         <Menu DockPanel.Dock="Top" Background="#1976D2" Foreground="White" FontSize="20">
             <MenuItem Header="Quản lý sinh viên" />
-            <MenuItem Header="Quản lý khoa"/>
-            <MenuItem Header="Quản lý môn học"/>
+            <MenuItem Header="Quản lý khoa" Click="MenuItem_Click"/>
+            <MenuItem Header="Quản lý môn học"  Click="quanlymonhoc_Click"/>
             <MenuItem Header="Quản lý điểm"/>
         </Menu>
 
@@ -124,16 +124,16 @@
             <GroupBox Header="Chức năng" Grid.Row="0" Grid.Column="1" FontSize="16" FontWeight="Bold">
                 <StackPanel Margin="10">
                     <Button x:Name="btnthem" Content="Thêm" Click="btnthem_Click"/>
-                    <Button x:Name="btnsua" Content="Sửa"/>
-                    <Button x:Name="btnxoa" Content="Xóa"/>
-                    <Button x:Name="btntimkiem" Content="Tìm kiếm"/>
+                    <Button x:Name="btnsua" Content="Sửa" Click="btnsua_Click"/>
+                    <Button x:Name="btnxoa" Content="Xóa" Click="btnxoa_Click"/>
+                    <Button x:Name="btntimkiem" Content="Tìm kiếm" Click="btntimkiem_Click"/>
                 </StackPanel>
             </GroupBox>
 
             <!-- Danh sách sinh viên -->
-            <DataGrid x:Name="datadanhachsinhvien" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="238,10,-228,0"
+            <DataGrid x:Name="datadanhachsinhvien" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
                       AutoGenerateColumns="False" IsReadOnly="False"
-                      ColumnWidth="*">
+                      ColumnWidth="*" SelectionChanged="datadanhachsinhvien_SelectionChanged">
                 <DataGrid.ColumnHeaderStyle>
                     <Style TargetType="DataGridColumnHeader">
                         <Setter Property="FontWeight" Value="Bold"/>

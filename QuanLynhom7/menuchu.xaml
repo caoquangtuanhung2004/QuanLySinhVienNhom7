@@ -12,10 +12,10 @@
             <MenuItem Header="Quản lý sinh viên" Click="quanlysinhvien_Click">
                
             </MenuItem>
-            <MenuItem Header="Quản lý khoa">
+            <MenuItem Header="Quản lý khoa" Click="quanlykhoa_Click">
                
             </MenuItem>
-            <MenuItem Header="Quản lý môn học">
+            <MenuItem Header="Quản lý môn học" Click="quanlymonhoc_Click">
                
             </MenuItem>
             <MenuItem Header="Quản lý điểm">

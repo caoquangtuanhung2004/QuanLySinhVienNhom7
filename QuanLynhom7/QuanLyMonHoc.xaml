@@ -1,0 +1,69 @@
+﻿<Window x:Class="QuanLynhom7.QuanLyMonHoc"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLynhom7"
+        mc:Ignorable="d"
+        Title="Quản lý Môn học" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" Background="#1976D2" Foreground="White" FontSize="20">
+            <MenuItem Header="Quản lý sinh viên" Click="quanlysinhvien_Click">
+
+            </MenuItem>
+            <MenuItem Header="Quản lý khoa" Click="quanlykhoa_Click">
+
+            </MenuItem>
+            <MenuItem Header="Quản lý môn học">
+
+            </MenuItem>
+            <MenuItem Header="Quản lý điểm">
+
+            </MenuItem>
+        </Menu>
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Nhập thông tin môn học -->
+            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0" Margin="0 0 20 10">
+                <StackPanel Orientation="Horizontal" Margin="0 5">
+                    <Label Content="Mã môn học:" Width="100"/>
+                    <TextBox x:Name="txtMaMon" Width="406"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 5">
+                    <Label Content="Tên môn học:" Width="100"/>
+                    <TextBox x:Name="txtTenMon" Width="404"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 5">
+                    <Label Content="Số tín chỉ:" Width="100"/>
+                    <TextBox x:Name="txtSoTinChi" Width="405"/>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Các nút chức năng bên phải -->
+            <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Top">
+                <Button x:Name="BtnThem" Content="Thêm"  Width="100" Margin="5"  Background="LightBlue" FontWeight="Bold"/>
+                <Button x:Name="BtnSua" Content="Sửa" Width="100" Margin="5"  Background="LightBlue" FontWeight="Bold"/>
+                <Button x:Name="BtnXoa" Content="Xóa" Width="100" Margin="5"  Background="LightBlue" FontWeight="Bold"/>
+
+            </StackPanel>
+
+            <DataGrid x:Name="dgMonHoc" Grid.Row="1" Grid.ColumnSpan="2" AutoGenerateColumns="False" CanUserAddRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Mã môn" Binding="{Binding MaMon}" Width="*"/>
+                    <DataGridTextColumn Header="Tên môn" Binding="{Binding TenMon}" Width="2*"/>
+                    <DataGridTextColumn Header="Số tín chỉ" Binding="{Binding SoTinChi}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+    </DockPanel>
+
+</Window>

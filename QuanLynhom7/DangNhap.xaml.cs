@@ -23,5 +23,24 @@ namespace QuanLynhom7
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            string username = txtUserId.Text.Trim();
+            string password = pwdBox.Password.Trim();
+
+            if (username == "admin" && password == "admin")
+            {
+                
+                menuchu menu = new menuchu(); 
+                menu.Show();
+
+                this.Close(); 
+            }
+            else
+            {
+                txtError.Text = "Sai tên đăng nhập hoặc mật khẩu!";
+            }
+        }
     }
 }

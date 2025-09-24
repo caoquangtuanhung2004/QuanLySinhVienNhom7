@@ -72,7 +72,7 @@
                     </StackPanel>
 
                     <Button x:Name="btnLogin" Style="{StaticResource PrimaryButton}" Width="360"
-                            Content="Đăng nhập"/>
+                            Content="Đăng nhập" Click="btnLogin_Click"/>
 
                     <TextBlock x:Name="txtError" Foreground="#B00020" Margin="0,8,0,0" TextWrapping="Wrap"/>
                 </StackPanel>

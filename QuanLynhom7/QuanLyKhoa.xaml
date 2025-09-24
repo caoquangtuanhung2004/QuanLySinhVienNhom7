@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuanLynhom7"
         mc:Ignorable="d"
-        Title="QuanLyKhoa" Height="450" Width="800">
+        Title="QuanLyKhoa" Height="450" Width="800" Loaded="Window_Loaded">
     <DockPanel>
         <!-- Menu chính -->
         <Menu DockPanel.Dock="Top" Background="#1976D2" Foreground="White" FontSize="20">
-            <MenuItem Header="Quản lý sinh viên" Click="quanlysinhvien_Click">
+            <MenuItem Header="Quản lý sinh viên" Click="quanlysinhvien_Click" >
 
             </MenuItem>
-            <MenuItem Header="Quản lý khoa">
+            <MenuItem Header="Quản lý khoa" >
 
             </MenuItem>
-            <MenuItem Header="Quản lý môn học">
+            <MenuItem Header="Quản lý môn học" Click="quanlymonhoc_Click">
 
             </MenuItem>
             <MenuItem Header="Quản lý điểm">
@@ -47,9 +47,13 @@
 
             <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Center">
                 <StackPanel Orientation="Vertical" Margin="0,0,20,0">
+                    <TextBlock Text="Mã khoa" FontWeight="Bold" Margin="0,0,0,2"/>
                     <TextBox x:Name="txtMaKhoa" Width="249" Margin="0,0,0,5" ToolTip="Mã Khoa"/>
+
+                    <TextBlock Text="Tên khoa" FontWeight="Bold" Margin="0,10,0,2"/>
                     <TextBox x:Name="txtTenKhoa" Width="250" Margin="0,0,0,5" ToolTip="Tên Khoa"/>
                 </StackPanel>
+
 
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
                     <Button Content="Thêm" Width="80" Click="BtnAdd_Click" Margin="5,0"/>

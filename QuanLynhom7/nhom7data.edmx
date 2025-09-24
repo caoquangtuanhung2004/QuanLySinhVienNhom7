@@ -51,16 +51,6 @@
           <Property Name="GioiTinh" Type="nvarchar" MaxLength="10" />
           <Property Name="DiaChi" Type="nvarchar(max)" />
           <Property Name="MaLop" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="ID_TaiKhoan" Type="int" />
-        </EntityType>
-        <EntityType Name="TaiKhoan">
-          <Key>
-            <PropertyRef Name="ID_TaiKhoan" />
-          </Key>
-          <Property Name="ID_TaiKhoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TenDangNhap" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="MatKhau" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="VaiTro" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <Association Name="FK_Diem_MonHoc">
           <End Role="MonHoc" Type="Self.MonHoc" Multiplicity="1" />
@@ -110,25 +100,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_SinhVien_TaiKhoan">
-          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
-          <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TaiKhoan">
-              <PropertyRef Name="ID_TaiKhoan" />
-            </Principal>
-            <Dependent Role="SinhVien">
-              <PropertyRef Name="ID_TaiKhoan" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="QuanLySinhViennhom7ModelStoreContainer">
           <EntitySet Name="Diem" EntityType="Self.Diem" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Khoa" EntityType="Self.Khoa" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Lop" EntityType="Self.Lop" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MonHoc" EntityType="Self.MonHoc" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SinhVien" EntityType="Self.SinhVien" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Diem_MonHoc" Association="Self.FK_Diem_MonHoc">
             <End Role="MonHoc" EntitySet="MonHoc" />
             <End Role="Diem" EntitySet="Diem" />
@@ -143,10 +120,6 @@
           </AssociationSet>
           <AssociationSet Name="FK_SinhVien_Lop" Association="Self.FK_SinhVien_Lop">
             <End Role="Lop" EntitySet="Lop" />
-            <End Role="SinhVien" EntitySet="SinhVien" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SinhVien_TaiKhoan" Association="Self.FK_SinhVien_TaiKhoan">
-            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
             <End Role="SinhVien" EntitySet="SinhVien" />
           </AssociationSet>
         </EntityContainer>
@@ -207,20 +180,8 @@
           <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MaLop" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ID_TaiKhoan" Type="Int32" />
           <NavigationProperty Name="Diems" Relationship="Self.FK_Diem_SinhVien" FromRole="SinhVien" ToRole="Diem" />
           <NavigationProperty Name="Lop" Relationship="Self.FK_SinhVien_Lop" FromRole="SinhVien" ToRole="Lop" />
-          <NavigationProperty Name="TaiKhoan" Relationship="Self.FK_SinhVien_TaiKhoan" FromRole="SinhVien" ToRole="TaiKhoan" />
-        </EntityType>
-        <EntityType Name="TaiKhoan">
-          <Key>
-            <PropertyRef Name="ID_TaiKhoan" />
-          </Key>
-          <Property Name="ID_TaiKhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="VaiTro" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="SinhViens" Relationship="Self.FK_SinhVien_TaiKhoan" FromRole="TaiKhoan" ToRole="SinhVien" />
         </EntityType>
         <Association Name="FK_Diem_MonHoc">
           <End Role="MonHoc" Type="Self.MonHoc" Multiplicity="1" />
@@ -270,25 +231,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_SinhVien_TaiKhoan">
-          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
-          <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TaiKhoan">
-              <PropertyRef Name="ID_TaiKhoan" />
-            </Principal>
-            <Dependent Role="SinhVien">
-              <PropertyRef Name="ID_TaiKhoan" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="QuanLySinhViennhom7Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Diems" EntityType="Self.Diem" />
           <EntitySet Name="Khoas" EntityType="Self.Khoa" />
           <EntitySet Name="Lops" EntityType="Self.Lop" />
           <EntitySet Name="MonHocs" EntityType="Self.MonHoc" />
           <EntitySet Name="SinhViens" EntityType="Self.SinhVien" />
-          <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
           <AssociationSet Name="FK_Diem_MonHoc" Association="Self.FK_Diem_MonHoc">
             <End Role="MonHoc" EntitySet="MonHocs" />
             <End Role="Diem" EntitySet="Diems" />
@@ -303,10 +251,6 @@
           </AssociationSet>
           <AssociationSet Name="FK_SinhVien_Lop" Association="Self.FK_SinhVien_Lop">
             <End Role="Lop" EntitySet="Lops" />
-            <End Role="SinhVien" EntitySet="SinhViens" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SinhVien_TaiKhoan" Association="Self.FK_SinhVien_TaiKhoan">
-            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
             <End Role="SinhVien" EntitySet="SinhViens" />
           </AssociationSet>
         </EntityContainer>
@@ -364,17 +308,6 @@
                 <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
                 <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
                 <ScalarProperty Name="MaLop" ColumnName="MaLop" />
-                <ScalarProperty Name="ID_TaiKhoan" ColumnName="ID_TaiKhoan" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TaiKhoans">
-            <EntityTypeMapping TypeName="QuanLySinhViennhom7Model.TaiKhoan">
-              <MappingFragment StoreEntitySet="TaiKhoan">
-                <ScalarProperty Name="ID_TaiKhoan" ColumnName="ID_TaiKhoan" />
-                <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
-                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
-                <ScalarProperty Name="VaiTro" ColumnName="VaiTro" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
