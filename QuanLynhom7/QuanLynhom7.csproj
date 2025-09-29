@@ -95,6 +95,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>nhom7data.edmx</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyDiem.xaml.cs">
+      <DependentUpon>QuanLyDiem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyKhoa.xaml.cs">
       <DependentUpon>QuanLyKhoa.xaml</DependentUpon>
     </Compile>
@@ -124,6 +127,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="menuchu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuanLyDiem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

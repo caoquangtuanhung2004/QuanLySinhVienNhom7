@@ -5,65 +5,105 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuanLynhom7"
         mc:Ignorable="d"
-        Title="Quản lý Môn học" Height="450" Width="800">
+        Title="Quản lý Môn học" Height="500" Width="900" Loaded="Window_Loaded"
+        Background="#F5F5F5">
+
     <DockPanel>
-        <Menu DockPanel.Dock="Top" Background="#1976D2" Foreground="White" FontSize="20">
-            <MenuItem Header="Quản lý sinh viên" Click="quanlysinhvien_Click">
 
-            </MenuItem>
-            <MenuItem Header="Quản lý khoa" Click="quanlykhoa_Click">
+        <Menu DockPanel.Dock="Top" Background="#1976D2" Foreground="White" FontSize="18" Padding="5">
+            <Menu.Resources>
+                <Style TargetType="MenuItem">
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Padding" Value="15,5"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#1565C0"/>
+                            <Setter Property="Foreground" Value="#FFEB3B"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Menu.Resources>
 
-            </MenuItem>
-            <MenuItem Header="Quản lý môn học">
-
-            </MenuItem>
-            <MenuItem Header="Quản lý điểm">
-
-            </MenuItem>
+            <MenuItem Header="📘 Quản lý sinh viên" Click="quanlysinhvien_Click"/>
+            <MenuItem Header="🏫 Quản lý khoa" Click="quanlykhoa_Click"/>
+            <MenuItem Header="📚 Quản lý môn học"/>
+            <MenuItem Header="📝 Quản lý điểm" Click="QuanLyDiem_Click"/>
         </Menu>
-        <Grid Margin="10">
+
+
+        <Grid Margin="15">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1.2*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!-- Nhập thông tin môn học -->
-            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0" Margin="0 0 20 10">
-                <StackPanel Orientation="Horizontal" Margin="0 5">
-                    <Label Content="Mã môn học:" Width="100"/>
-                    <TextBox x:Name="txtMaMon" Width="406"/>
+
+            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0" Margin="0 0 20 15">
+                <TextBlock Text="📚 Quản lý Môn học" FontSize="22" FontWeight="Bold" Foreground="#1976D2" Margin="0 0 0 15"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8">
+                    <Label Content="Mã môn học:" Width="120" FontWeight="Bold"/>
+                    <TextBox x:Name="txtMaMon" Width="350" Height="30" Padding="5"
+                             BorderBrush="#90CAF9" BorderThickness="1"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="0 5">
-                    <Label Content="Tên môn học:" Width="100"/>
-                    <TextBox x:Name="txtTenMon" Width="404"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8">
+                    <Label Content="Tên môn học:" Width="120" FontWeight="Bold"/>
+                    <TextBox x:Name="txtTenMon" Width="350" Height="30" Padding="5"
+                             BorderBrush="#90CAF9" BorderThickness="1"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="0 5">
-                    <Label Content="Số tín chỉ:" Width="100"/>
-                    <TextBox x:Name="txtSoTinChi" Width="405"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8">
+                    <Label Content="Số tín chỉ:" Width="120" FontWeight="Bold"/>
+                    <TextBox x:Name="txtSoTinChi" Width="350" Height="30" Padding="5"
+                             BorderBrush="#90CAF9" BorderThickness="1"/>
                 </StackPanel>
             </StackPanel>
 
-            <!-- Các nút chức năng bên phải -->
+
             <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Top">
-                <Button x:Name="BtnThem" Content="Thêm"  Width="100" Margin="5"  Background="LightBlue" FontWeight="Bold"/>
-                <Button x:Name="BtnSua" Content="Sửa" Width="100" Margin="5"  Background="LightBlue" FontWeight="Bold"/>
-                <Button x:Name="BtnXoa" Content="Xóa" Width="100" Margin="5"  Background="LightBlue" FontWeight="Bold"/>
+                <Button x:Name="BtnThem" Content="➕ Thêm" Width="120" Height="35" Margin="5"
+            Background="#2196F3" Foreground="White" FontWeight="Bold"
+            BorderThickness="0" Click="BtnThem_Click"/>
+
+
+                <Button x:Name="BtnSua" Content="✏️ Sửa" Width="120" Height="35" Margin="5"
+            Background="#9C27B0" Foreground="White" FontWeight="Bold"
+            BorderThickness="0" Click="BtnSua_Click"/>
+
+
+                <Button x:Name="BtnXoa" Content="🗑 Xóa" Width="120" Height="35" Margin="5"
+            Background="#E91E63" Foreground="White" FontWeight="Bold"
+            BorderThickness="0" Click="BtnXoa_Click"/>
 
             </StackPanel>
 
-            <DataGrid x:Name="dgMonHoc" Grid.Row="1" Grid.ColumnSpan="2" AutoGenerateColumns="False" CanUserAddRows="False">
+
+
+            <DataGrid x:Name="dgMonHoc" Grid.Row="1" Grid.ColumnSpan="2" AutoGenerateColumns="False"
+                      CanUserAddRows="False" AlternatingRowBackground="#E3F2FD"
+                      BorderBrush="#90CAF9" BorderThickness="1" RowHeight="35" FontSize="14"
+                      SelectionChanged="dgMonHoc_SelectionChanged">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Mã môn" Binding="{Binding MaMon}" Width="*"/>
-                    <DataGridTextColumn Header="Tên môn" Binding="{Binding TenMon}" Width="2*"/>
+                    <DataGridTextColumn Header="Mã môn" Binding="{Binding MaMH}" Width="*"/>
+                    <DataGridTextColumn Header="Tên môn" Binding="{Binding TenMH}" Width="2*"/>
                     <DataGridTextColumn Header="Số tín chỉ" Binding="{Binding SoTinChi}" Width="*"/>
                 </DataGrid.Columns>
+                <DataGrid.Resources>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#1976D2"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Height" Value="40"/>
+                    </Style>
+                </DataGrid.Resources>
             </DataGrid>
         </Grid>
-
     </DockPanel>
-
 </Window>

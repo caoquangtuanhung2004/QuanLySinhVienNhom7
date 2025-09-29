@@ -139,7 +139,13 @@ namespace QuanLynhom7
             this.Close();
 
         }
+        private void QuanLyDiem_Click(object sender, RoutedEventArgs e)
+        {
+            QuanLyDiem qlk = new QuanLyDiem();
+            qlk.Show();
+            this.Close();
+        }
 
-        
+
     }
 }

@@ -40,7 +40,6 @@
             </Setter>
         </Style>
 
-        <!-- Style cho GroupBox -->
         <Style TargetType="GroupBox">
             <Setter Property="Background" Value="White"/>
             <Setter Property="BorderBrush" Value="#1976D2"/>
@@ -48,7 +47,7 @@
             <Setter Property="Margin" Value="5"/>
         </Style>
 
-        <!-- Style cho DataGrid -->
+        
         <Style TargetType="DataGrid">
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="RowHeight" Value="35"/>
@@ -61,15 +60,15 @@
     </Window.Resources>
 
     <DockPanel LastChildFill="True">
-        <!-- Menu -->
+        
         <Menu DockPanel.Dock="Top" Background="#1976D2" Foreground="White" FontSize="20">
             <MenuItem Header="Quản lý sinh viên" />
             <MenuItem Header="Quản lý khoa" Click="MenuItem_Click"/>
             <MenuItem Header="Quản lý môn học"  Click="quanlymonhoc_Click"/>
-            <MenuItem Header="Quản lý điểm"/>
+            <MenuItem Header="Quản lý điểm" Click="QuanLyDiem_Click"/>
         </Menu>
 
-        <!-- Grid chính -->
+        
         <Grid Margin="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>

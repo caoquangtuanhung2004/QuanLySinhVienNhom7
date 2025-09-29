@@ -5,29 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuanLynhom7"
         mc:Ignorable="d"
-        Title="menuchu" Height="450" Width="800">
+        Title="Trang chủ" Height="450" Width="800">
     <DockPanel>
-        <!-- Menu chính -->
-        <Menu DockPanel.Dock="Top" Background="#1976D2" Foreground="White" FontSize="20">
-            <MenuItem Header="Quản lý sinh viên" Click="quanlysinhvien_Click">
-               
-            </MenuItem>
-            <MenuItem Header="Quản lý khoa" Click="quanlykhoa_Click">
-               
-            </MenuItem>
-            <MenuItem Header="Quản lý môn học" Click="quanlymonhoc_Click">
-               
-            </MenuItem>
-            <MenuItem Header="Quản lý điểm">
-               
-            </MenuItem>
+       
+        <Menu DockPanel.Dock="Top" Background="#1976D2" Foreground="White" FontSize="18" Padding="5">
+            <Menu.Resources>
+                
+                <Style TargetType="MenuItem">
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Padding" Value="15,5"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Style.Triggers>
+                       
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#1565C0"/>
+                            <Setter Property="Foreground" Value="#FFEB3B"/>
+                        </Trigger>
+                       
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#0D47A1"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Menu.Resources>
+
+            <MenuItem Header="📘 Quản lý sinh viên" Click="quanlysinhvien_Click"/>
+            <MenuItem Header="🏫 Quản lý khoa" Click="quanlykhoa_Click"/>
+            <MenuItem Header="📚 Quản lý môn học" Click="quanlymonhoc_Click"/>
+            <MenuItem Header="📝 Quản lý điểm" Click="QuanLyDiem_Click"/>
         </Menu>
 
-        <!-- Nội dung chính -->
+        
         <Grid Background="White">
-            <TextBlock Text="Chào mừng đến với hệ thống Quản lý sinh viên"
+            <TextBlock Text="✨ Chào mừng đến với hệ thống Quản lý sinh viên ✨"
                        HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="20" FontWeight="Bold" Foreground="DarkBlue"/>
+                       FontSize="22" FontWeight="Bold" Foreground="#1976D2"/>
         </Grid>
     </DockPanel>
 </Window>

@@ -51,12 +51,11 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <!-- Tiêu đề -->
                 <StackPanel Grid.Row="0" Margin="0,0,0,8">
                     <TextBlock Text="Đăng nhập" FontSize="22" FontWeight="Bold" Foreground="#1E2A3A"/>
                 </StackPanel>
 
-                <!-- Nội dung -->
+                
                 <StackPanel Grid.Row="1" Margin="0,8,0,0">
                     <TextBlock Text="Tên đăng nhập" FontSize="12" Foreground="#374151"/>
                     <TextBox x:Name="txtUserId" Style="{StaticResource InputBox}" Width="360"/>
@@ -65,7 +64,7 @@
                     <PasswordBox x:Name="pwdBox" Style="{StaticResource InputBoxPwd}" Width="360"/>
 
                     <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
-                        <CheckBox x:Name="chkRemember" Content="Ghi nhớ đăng nhập"/>
+                        
                         <Button Content="Quên mật khẩu?" 
                                 Background="Transparent" BorderThickness="0" Foreground="#307FE2"
                                 Margin="20,0,0,0"/>

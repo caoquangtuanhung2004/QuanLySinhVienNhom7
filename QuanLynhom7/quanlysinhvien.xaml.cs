@@ -25,6 +25,12 @@ namespace QuanLynhom7
             InitializeComponent();
             loadlop();
         }
+        private void QuanLyDiem_Click(object sender, RoutedEventArgs e)
+        {
+            QuanLyDiem qlk = new QuanLyDiem();
+            qlk.Show();
+            this.Close();
+        }
         private void loadlop()
         {
             var dsl = db.Lops.ToList();

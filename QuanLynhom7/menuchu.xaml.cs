@@ -46,5 +46,11 @@ namespace QuanLynhom7
             qlk.Show();
             this.Close();
         }
+        private void QuanLyDiem_Click(object sender, RoutedEventArgs e)
+        {
+            QuanLyDiem qlk = new QuanLyDiem();
+            qlk.Show();
+            this.Close();
+        }
     }
 }
